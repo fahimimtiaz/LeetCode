@@ -4,7 +4,8 @@ class Solution(object):
     def maxProduct(self, nums):
         res1 = [0 for i in range(len(nums))]
         res2 = [0 for i in range(len(nums))]
-        
+
+
         if len(nums) == 0:
             return 0
         
@@ -18,7 +19,7 @@ class Solution(object):
         
         return max(max(res1), max(res2))
 
-ans = Solution().maxProduct(nums = [0, 2])
+ans = Solution().maxProduct(nums = [0, 2 , 0])
 print(ans)
 
 
