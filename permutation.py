@@ -1,12 +1,20 @@
-from itertools import permutations
+class Solution:
+    def permutation(self, nums):
+        result = []
 
-def permutation(nums, start = 0):
+        if len(nums) == 1:
+            return [nums[:]]
 
-    if start == len(nums) - 1:
-        print(nums)
-    else:
-        for i in range(start, len(nums)):
-            nums[start], nums[i] = nums[i], nums[start]
-            permutation(nums, start + 1)    
-            nums[start], nums[i] = nums[i], nums[start] 
-print(permutation([1,2,3]))
+        for i in range(len(nums)):
+            n = nums.pop(0)
+            perms = self.permutation(nums)
+
+            for perm in perms:
+                perm.append(n)
+            
+            result.extend(perms)
+            nums.append(n)
+
+        return result
+            
+print(Solution().permutation([1,2,3]))
