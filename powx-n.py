@@ -6,11 +6,18 @@ class Solution(object):
             
         result = 1
         while n > 0:
+            print("n: " + str(n))
+            print("x: " + str(x))
+            print("result: " + str(result))
+            print("=============")
+
             if n % 2 == 1:
+                print("Multiplying when x is " + str(x))
                 result *= x
             x *= x
             n //= 2
+
         
         return result
 
-print(Solution().myPow(x =0.00001,n =2147483647))
+print(Solution().myPow(x =2,n =20))
