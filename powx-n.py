@@ -6,9 +6,9 @@ class Solution(object):
             
         result = 1
         while n > 0:
+            print("result: " + str(result))
             print("n: " + str(n))
             print("x: " + str(x))
-            print("result: " + str(result))
             print("=============")
 
             if n % 2 == 1:
