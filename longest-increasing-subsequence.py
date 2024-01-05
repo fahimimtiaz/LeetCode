@@ -10,14 +10,8 @@ class Solution:
         
         for i in range(1, n):
             for j in range(i):
-                print(nums[i], "-", nums[j])
-                print("==")
                 if nums[i] > nums[j]:
-                    print("Condition Matched")
-                    print(f"{nums[i]} is greater than {nums[j]}")
-                    print(f"Now i: {i} and j: {j}")
                     dp[i] = max(dp[i], dp[j] + 1)
-        print(dp)
         return max(dp)
 
 
