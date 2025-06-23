@@ -23,10 +23,27 @@ class Solution:
 
 
 
-print(Solution().merge([[1,4],[2,3]]))
+print(Solution().merge([[1,2],[3,5],[4,8],[6,7],[8,10],[12,16]]))
 
 
+# class Solution:
+#     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+#         if not intervals:
+#             return []
 
+#         # Step 1: Sort intervals based on start time
+#         intervals.sort(key=lambda x: x[0])
+#         merged = [intervals[0]]
+
+#         # Step 2: Iterate and merge
+#         for current in intervals[1:]:
+#             last = merged[-1]
+#             if current[0] <= last[1]:  # Overlap detected
+#                 last[1] = max(last[1], current[1])  # Merge
+#             else:
+#                 merged.append(current)
+
+#         return merged
 
 # Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals,
 # and return an array of the non-overlapping intervals that cover all the intervals in the input.
